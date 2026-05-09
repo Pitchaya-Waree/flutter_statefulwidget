@@ -29,7 +29,9 @@ class Attraction {
       coverImage: json['coverimage'],
       latitude: json['latitude'],
       longitude: json['longitude'],
-      rating: json['rating'], // Added for assignment
+      rating:
+          json['rating'] ??
+          0, // Added for assignment, default to 0 if not present
     );
   }
 }
